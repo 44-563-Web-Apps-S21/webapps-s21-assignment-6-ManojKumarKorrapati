@@ -2,39 +2,38 @@
 <html>
 
 <head>
-    <title>Hide and Seek</title>
+    <title>Pass a Phrase</title>
 </head>
 
 <body>
-    <header>Hidden things by Manoj Kumar Korrapati</header>
+    <header>Pass phrase by Manoj Kumar Korrapati</header>
     <h2>Getting input</h2>
 
     <form>
-        <label for="form_secret">Enter the Secret word </label>
-        <input type="password" id="form_secret" name="form_secret" value="Secret">
+        <label for="form_secret">Enter the Secret phrase </label>
+        <input type="password" id="form_secret" name="form_secret" value="Let me in">
         <br>
-        <label for="form_guess">Enter Your guess</label>
-        <input type="text" id="form_guess" name="form_guess" autofocus> <br>
+        <label for="form_phrase">Enter a phrase</label>
+        <input type="text" id="form_phrase" name="form_phrase" autofocus> <br>
 
-        <input type="button" onclick="processGuess()" value="Check the guess">
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
     </form>
-
 
     <p id="result">This text will be replaced </p>
 
     <div class="container">
         <img src="images/Ape.jpg" alt="Ape" onclick="newImage();" id="images" style="width: 200; height: 200;">
     </div>
-    
+
     <script>
         correct = 0
         wrong = 0
         count = 0
 
-        function processGuess() {
+        function processPhrase() {
             console.log("Getting form values")
             secret = document.getElementById("form_secret").value
-            guess = document.getElementById("form_guess").value
+            guess = document.getElementById("form_phrase").value
             if (secret == guess) {
                 correct = correct + 1
                 alert("Access allowed")
@@ -64,7 +63,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>
