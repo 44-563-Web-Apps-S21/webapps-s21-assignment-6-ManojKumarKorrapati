@@ -23,9 +23,9 @@
     <p id="result">This text will be replaced </p>
 
     <div class="container">
-        <img src="images/Ape.jpg" alt="Ape" onclick="rotateImage();" id="images">
+        <img src="images/Ape.jpg" alt="Ape" onclick="newImage();" id="images" style="width: 200; height: 200;">
     </div>
-
+    
     <script>
         correct = 0
         wrong = 0
@@ -37,17 +37,17 @@
             guess = document.getElementById("form_guess").value
             if (secret == guess) {
                 correct = correct + 1
-                alert("Congratulations")
+                alert("Access allowed")
             } else {
                 wrong = wrong + 1
-                alert("Sorry")
+                alert("Access denied")
             }
 
             out = document.getElementById("result")
             out.innerHTML = "Correct Count: " + correct + " ,Wrong Count: " + wrong
 
         }
-        function rotateImage(){
+        function newImage(){
             switch(count){
                 case 0 :
                     document.getElementById("images").src="images/panda.jpg"
