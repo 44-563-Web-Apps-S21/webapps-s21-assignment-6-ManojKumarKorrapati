@@ -51,10 +51,6 @@
             } else {
                 wrong = wrong + 1
                 alert("Access denied")
-                if(wrong >= 2){
-                document.getElementById("processButton").onclick=function(){alert("Access denied")
-                alert("Account Locked")}
-                 }
             }
             out = document.getElementById("result")
             out.innerHTML = "Correct Count: " + correct + " ,Wrong Count: " + wrong
@@ -75,10 +71,6 @@
                     count = 0
                     break;                    
             }
-        }
-        function pageAlert(){
-            alert("Account is Locked")
-
         }
     </script>
 </body>
