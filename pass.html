@@ -21,13 +21,17 @@
     <h2>Getting input</h2>
 
     <form>
-        <label for="form_secret">Enter the Secret phrase </label>
-        <input type="password" id="form_secret" name="form_secret" value="Let me in">
+        <div class="form-group" style="width: 25%;">
+        <label for="form_secret" class="form-label">Enter the Secret phrase </label>
+        <input type="password" class="form-control" id="form_secret" name="form_secret" value="Let me in">
+    </div>
         <br>
-        <label for="form_phrase">Enter a phrase</label>
-        <input type="text" id="form_phrase" name="form_phrase" autofocus> <br>
+        <div class="form-group" style="width: 25%;">
+        <label for="form_phrase" class="form-label">Enter a phrase</label>
+        <input type="text" class="form-control" id="form_phrase" name="form_phrase" autofocus> <br>
+    </div>
 
-        <input type="button" onclick="processPhrase()" value="Check the phrase" id="processButton">
+        <input type="button" onclick="processPhrase()" value="Check the phrase" id="processButton" class="btn btn-primary">
     </form>
 
     <p id="result">This text will be replaced </p>
@@ -51,6 +55,9 @@
             } else {
                 wrong = wrong + 1
                 alert("Access denied")
+                if(wrong >= 2){
+                document.getElementById("processButton").onclick=function(){alert("Account Locked")}
+                }	
             }
             out = document.getElementById("result")
             out.innerHTML = "Correct Count: " + correct + " ,Wrong Count: " + wrong
