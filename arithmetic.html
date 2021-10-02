@@ -37,17 +37,24 @@
     <br>
 
     <form>
-        <input type="radio" id="rg1_plus" name="operators" value="plus" onclick="processRadio()">
-        <label for="rg1_plus">+</label></br>
+        <div class="form-check">
+        <input type="radio" class="form-check-input" id="rg1_plus" name="operators" value="plus" onclick="processRadio()">
+        <label for="rg1_plus" class="form-check-label">+</label></br>
+        </div>
 
-        <input type="radio" id="rg1_minus" name="operators" value="minus" onclick="processRadio()">
-        <label for="rg1_minus">-</label></br>
+        <div class="form-check">
+        <input type="radio" class="form-check-input"id="rg1_minus" name="operators" value="minus" onclick="processRadio()">
+        <label for="rg1_minus" class="form-check-label">-</label></br>
+        </div>
 
-        <input type="radio" id="rg1_times" name="operators" value="times" onclick="processRadio()">
-        <label for="rg1_times">*</label></br>
-
-        <input type="radio" id="rg1_divide  " name="operators" value="divide" onclick="processRadio()">
-        <label for="rg1_divide">/</label></br>
+        <div class="form-check">
+        <input type="radio" class="form-check-input" id="rg1_times" name="operators" value="times" onclick="processRadio()">
+        <label for="rg1_times" class="form-check-label">*</label></br>
+        </div>
+        <div class="form-check">
+        <input type="radio" class="form-check-input" id="rg1_divide  " name="operators" value="divide" onclick="processRadio()">
+        <label for="rg1_divide" class="form-check-label">/</label></br>
+        </div>
     </form>
 
     <p id="left">This text will be replaced </p>
