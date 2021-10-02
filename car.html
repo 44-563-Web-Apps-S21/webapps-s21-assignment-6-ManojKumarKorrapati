@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Details</title>
+</head>
+
+<body>
+    <header>Manoj Kumar Korrapati orders a car</header>
+    <h2>Getting input</h2>
+
+    <form>
+        <input type="checkbox" id="cb_electric" name="carDetails" value="electric">
+        <label for="cb1_cheese">electric</label></br>
+      
+        <input type="checkbox" id="cb_ac" name="carDetails" value="ac">
+        <label for="cb1_olive">ac</label></br>
+      
+        <input type="checkbox" id="cb_gps" name="carDetails" value="gps">
+        <label for="cb1_onion">gps</label></br>
+        <br>
+        <input type="button" onclick="orderCar()" value="Order a car" style="color: blue;">
+      </form>
+      <br>
+    <form>
+        <label for="form_property">Enter a property</label>
+        <input type="text" id="form_property" name="form_property" value="color">
+        <br>
+        <label for="form_value">Enter a value</label>
+        <input type="text" id="form_value" name="form_value" autofocus> <br>
+
+        <input type="button" onclick="updateCar()" value="Update the car" style="color: blue;">
+    </form>
+
+    <p id="left">This text will be replaced </p>
+    <br>
+    <script>
+        my_car =""
+        function orderCar() {
+            my_car =""
+            console.log("Getting form values")
+            isElectric = document.getElementById("cb_electric").checked
+            isAc = document.getElementById("cb_ac").checked
+            isGps = document.getElementById("cb_gps").checked
+            
+            if(isElectric){
+                my_car=my_car+"Electic: true, "
+            }else{
+                my_car=my_car+"Electic: false, "
+            }
+            if(isAc){
+                my_car=my_car+"Ac: true, "
+            }else{
+                my_car=my_car+"Ac: false, "
+            }
+            if(isGps){
+                my_car=my_car+"Gps: true"
+            }else{
+                my_car=my_car+"Gps: false"
+            }
+            out = document.getElementById("left")
+            out.innerHTML = my_car
+
+        }
+
+        function updateCar() {
+
+            property =document.getElementById("form_property").value
+            value = document.getElementById("form_value").value
+            my_car=my_car+", Property: "+property+", value: "+value
+            out = document.getElementById("left")
+            out.innerHTML = my_car
+        }
+    </script>
+
+</body>
+
+</html>
